@@ -1,0 +1,80 @@
+/* ===== COLORES: cambia solo aquí ===== */
+:root{--c1:#ff3d86;--c2:#ff8a3d;--acc:#2ec4b6;--ink:#4a2517;--bg:#fff7f2}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',Arial,sans-serif;margin:0;color:var(--ink);background:var(--bg);line-height:1.6}
+section{padding:70px 8%;text-align:center}
+h2{font-size:32px;margin:0 0 30px}
+/* ===== HEADER ===== */
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 60px;background:linear-gradient(120deg,var(--c1),var(--c2));color:#fff;box-shadow:0 3px 10px #0002}
+header h1{margin:0;font-size:30px;font-weight:800}
+nav{display:flex;gap:30px}
+nav a{color:#fff;text-decoration:none;font-weight:700}
+nav a:hover{text-decoration:underline}
+/* ===== HERO ===== */
+.hero{display:flex;align-items:center;gap:40px;text-align:left;min-height:450px}
+.heroTexto{flex:1}
+.heroTexto h2{font-size:42px;line-height:1.1;margin-bottom:20px}
+.heroTexto p{font-size:18px;margin-bottom:25px}
+.heroTexto button{padding:14px 30px;font-size:17px;font-weight:800;border:none;border-radius:999px;background:var(--acc);color:var(--ink);cursor:pointer;box-shadow:0 6px 16px #0003;transition:.3s}
+.heroTexto button:hover{transform:scale(1.05)}
+.heroImagen{flex:1;aspect-ratio:4/3}
+/* ===== CAJA DE FOTO (emoji si no hay foto) ===== */
+.caja{position:relative;display:grid;place-items:center;overflow:hidden;border-radius:22px;background:linear-gradient(135deg,var(--c1),var(--c2));box-shadow:0 10px 25px #0002}
+.caja::before{content:attr(data-e);font-size:70px}
+.caja img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.caja:hover img{transform:scale(1.05)}
+/* ===== GALERÍA ===== */
+.galeria-vetcare{background:#fff}
+.galeria-subtitulo{margin:-15px 0 35px;color:#666;font-size:17px}
+.galeria-contenedor{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;max-width:1100px;margin:auto}
+.foto-vetcare{height:280px}
+/* ===== SERVICIOS ===== */
+.servicios-contenedor{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:25px;max-width:1100px;margin:auto}
+.tarjeta-servicio{background:#fff;padding:30px 20px;border-radius:18px;border-top:6px solid var(--c1);box-shadow:0 5px 20px #0001;transition:transform .3s}
+.tarjeta-servicio:nth-child(2n){border-color:var(--c2)}
+.tarjeta-servicio:nth-child(3n){border-color:var(--acc)}
+.tarjeta-servicio:hover{transform:translateY(-5px)}
+.tarjeta-servicio h3{margin:0 0 12px;font-size:20px}
+.tarjeta-servicio p{margin:0}
+/* ===== NOSOTROS ===== */
+.nosotros{background:#fff}
+.nosotros h2{color:var(--c1)}
+.nosotros-contenido{display:flex;gap:40px;max-width:1100px;margin:auto}
+.nosotros-texto,.nosotros-info{flex:1}
+.nosotros-texto{background:var(--bg);padding:35px;border-radius:16px;text-align:left}
+.nosotros-texto h3{color:var(--c1);font-size:24px;margin-top:0}
+.nosotros-info{display:flex;flex-direction:column;gap:15px}
+.info-nosotros{background:var(--bg);padding:20px;border-radius:16px;text-align:left;border-left:5px solid var(--c2)}
+.info-nosotros h3{margin:0 0 6px;color:var(--c1)}
+.info-nosotros p{margin:0}
+/* ===== FORMULARIO (oculto hasta pulsar el botón) ===== */
+#formularioCita{display:none;max-width:700px;margin:40px auto;padding:40px;background:#fff;border-radius:20px;box-shadow:0 8px 25px #0002;text-align:left}
+#formularioCita h2{text-align:center;color:var(--c1)}
+#formularioCita label{display:block;margin:18px 0 6px;font-weight:700}
+#formularioCita input,#formularioCita select,#formularioCita textarea{width:100%;padding:12px 14px;border:1px solid #cfd8dc;border-radius:10px;font-size:16px;font-family:inherit}
+#formularioCita input:focus,#formularioCita select:focus,#formularioCita textarea:focus{outline:2px solid var(--c1);border-color:var(--c1)}
+#formularioCita textarea{min-height:100px;resize:vertical}
+#guardarCita{display:block;width:100%;margin-top:28px;padding:14px;border:none;border-radius:10px;background:linear-gradient(120deg,var(--c1),var(--c2));color:#fff;font-size:17px;font-weight:800;cursor:pointer}
+#guardarCita:hover{filter:brightness(1.1)}
+#guardarCita:disabled{opacity:.6}
+#resultadoCita{text-align:center;padding:0 8%;font-weight:700}
+/* ===== CONTACTO ===== */
+.contacto-contenido{display:flex;gap:40px;max-width:1000px;margin:auto}
+.datos-contacto,.mapa{flex:1}
+.datos-contacto{background:#fff;padding:30px;border-radius:18px;text-align:left;box-shadow:0 5px 20px #0001}
+.datos-contacto h3{font-size:24px;margin-top:0}
+.mapa{border-radius:18px;overflow:hidden;box-shadow:0 5px 20px #0001}
+.mapa iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+/* ===== BOTÓN FLOTANTE WHATSAPP ===== */
+.boton-whatsapp{position:fixed;bottom:20px;right:20px;width:60px;height:60px;background:#25d366;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;text-decoration:none;z-index:1000;box-shadow:0 4px 12px #0004;transition:transform .3s}
+.boton-whatsapp:hover{transform:scale(1.1)}
+/* ===== CELULAR ===== */
+@media(max-width:768px){
+header{flex-direction:column;padding:20px 15px;gap:12px;text-align:center}
+nav{flex-wrap:wrap;justify-content:center;gap:12px 20px}
+.hero,.nosotros-contenido,.contacto-contenido{flex-direction:column}
+.hero{text-align:center}.heroImagen{width:100%}
+.heroTexto h2{font-size:32px}
+section{padding:50px 5%}
+#formularioCita{padding:25px}
+}

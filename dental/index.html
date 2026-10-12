@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonrisa Plena | Lima</title>
+    <meta name="description" content="Sonrisa Plena en Lima. Odontología general y estética, sin dolor y con precios claros. La primera evaluación es gratis.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+   <header>
+      <h1>🦷 Sonrisa Plena</h1>
+      <nav>
+         <a href="#">Inicio</a>
+         <a href="#servicios">Servicios</a>
+         <a href="#nosotros">Nosotros</a>
+         <a href="#formularioCita">Citas</a>
+         <a href="#contacto">Contacto</a>
+      </nav>
+   </header>
+
+   <main>
+      <section class="hero">
+         <div class="heroTexto">
+            <h2>Una sonrisa que te encante mostrar</h2>
+            <p>Odontología general y estética, sin dolor y con precios claros. La primera evaluación es gratis.</p>
+            <button id="botonCita">Reservar evaluación gratis</button>
+         </div>
+         <!-- FOTO PRINCIPAL: guarda tu foto en images/hero.jpg -->
+         <div class="heroImagen caja" data-e="🦷">
+            <img src="images/dental.png" alt="Sonrisa Plena" onerror="this.remove()">
+         </div>
+      </section>
+
+      <!-- GALERÍA: images/foto1.jpg, foto2.jpg, foto3.jpg -->
+      <section class="galeria-vetcare">
+         <h2>Conoce el consultorio</h2>
+         <p class="galeria-subtitulo">Tecnología moderna y trato amable.</p>
+         <div class="galeria-contenedor">
+        <div class="foto-vetcare caja" data-e="🦷">
+            <img src="images/foto1.jpg" alt="Sonrisa Plena foto 1" onerror="this.remove()">
+        </div>
+
+        <div class="foto-vetcare caja" data-e="😁">
+            <img src="images/foto2.jpg" alt="Sonrisa Plena foto 2" onerror="this.remove()">
+        </div>
+
+        <div class="foto-vetcare caja" data-e="🪥">
+            <img src="images/foto3.jpg" alt="Sonrisa Plena foto 3" onerror="this.remove()">
+        </div>
+         </div>
+      </section>
+
+      <section id="servicios" class="servicios">
+         <h2>Nuestros Servicios</h2>
+         <div class="servicios-contenedor">
+        <div class="tarjeta-servicio">
+            <h3>🦷 Limpieza dental</h3>
+            <p>Prevención y cuidado de tus encías.</p>
+        </div>
+
+        <div class="tarjeta-servicio">
+            <h3>✨ Blanqueamiento</h3>
+            <p>Dientes más blancos en una sesión.</p>
+        </div>
+
+        <div class="tarjeta-servicio">
+            <h3>😁 Ortodoncia</h3>
+            <p>Brackets y alineadores.</p>
+        </div>
+
+        <div class="tarjeta-servicio">
+            <h3>🩹 Resinas y empastes</h3>
+            <p>Reparamos caries sin dolor.</p>
+        </div>
+         </div>
+      </section>
+
+      <section id="nosotros" class="nosotros">
+         <h2>Conoce Sonrisa Plena</h2>
+         <div class="nosotros-contenido">
+            <div class="nosotros-texto">
+               <h3>Odontología sin miedo</h3>
+               <p>Atendemos a niños y adultos con paciencia y tecnología moderna para que cada visita sea cómoda.</p>
+               <p>Te explicamos cada tratamiento y su precio antes de empezar.</p>
+            </div>
+            <div class="nosotros-info">
+            <div class="info-nosotros">
+                <h3>😁 Sin dolor</h3>
+                <p>Anestesia moderna.</p>
+            </div>
+
+            <div class="info-nosotros">
+                <h3>💰 Precios claros</h3>
+                <p>Sin sorpresas.</p>
+            </div>
+
+            <div class="info-nosotros">
+                <h3>🚑 Urgencias</h3>
+                <p>Atención el mismo día.</p>
+            </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- CAMBIAR: reemplaza el correo por el del cliente (la primera vez FormSubmit le pide confirmar) -->
+      <section id="formularioCita">
+         <h2>Agenda tu visita</h2>
+         <form id="formCita" action="https://formsubmit.co/CORREO_DEL_CLIENTE@gmail.com" method="POST">
+      <label>Nombre completo:</label>
+      <input type="text" id="Nombre" name="Nombre" required>
+      <label>Celular / WhatsApp:</label>
+      <input type="tel" id="Celular" name="Celular" inputmode="numeric" pattern="9[0-9]{8}" maxlength="9" placeholder="Ej: 958993139" title="9 dígitos, empezando con 9" required>
+      <label>Tratamiento:</label>
+      <select id="Tratamiento" name="Tratamiento"><option>Evaluación gratis</option><option>Limpieza</option><option>Blanqueamiento</option><option>Ortodoncia</option><option>Urgencia</option></select>
+      <label>Fecha:</label>
+      <input type="date" id="Fecha" name="Fecha" required>
+      <label>Hora:</label>
+      <input type="time" id="Hora" name="Hora" required>
+      <label>Comentarios:</label>
+      <textarea id="Comentarios" name="Comentarios"></textarea>
+
+      <input type="hidden" name="_subject" value="Nueva cita dental desde la web">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit" id="guardarCita">Confirmar cita</button>
+         </form>
+      </section>
+
+      <div id="resultadoCita"></div>
+
+      <section id="contacto" class="contacto">
+         <h2>Contáctanos</h2>
+         <div class="contacto-contenido">
+            <div class="datos-contacto">
+               <h3>Sonrisa Plena</h3>
+               <p>📍 Dirección: Calle Las Flores 456, Lima</p>
+               <p>📞 Teléfono: 999 999 999</p>
+               <p>💬 WhatsApp: 999 999 999</p>
+               <p>🕐 Horario: Lunes a sábado, 9:00 a.m. - 7:00 p.m.</p>
+            </div>
+            <div class="mapa">
+               <iframe src="https://www.google.com/maps?q=Calle+Las+Flores+456,+Lima&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!-- CAMBIAR: número de WhatsApp con código de país (51) y sin + -->
+   <a href="https://wa.me/51999999999" class="boton-whatsapp" target="_blank" aria-label="Escríbenos por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script src="script.js"></script>
+</body>
+</html>

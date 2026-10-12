@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria José Granda | San martín de Porres, Lima</title>
+      <meta name="description" content="Veterinaria José Granda en San Martín de Porres, Lima. Consultas, vacunación, desparasitación y grooming para perros y gatos. Agenda tu cita.">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+   <header>
+      <h1>Veterinaria José Granda</h1>
+
+      <nav>
+         <a href="#">Inicio</a>
+         <a href="#servicios">Servicios</a>
+         <a href="#nosotros">Nosotros</a>
+         <a href="#formularioCita">Citas</a>
+         <a href="#contacto">Contacto</a>
+      </nav>
+   </header>
+   
+   <main>
+      <section class="hero">
+
+         <div class="heroTexto">
+
+         <h2>Cuida a tu mejor amigo.</h2>
+
+         <p>Ateción veterinaria profesional para perros y gatos.
+            Estamos aquí para cuidar su salud y bienestar.</p>
+
+       <button id="botonCita">Agendar una cita</button>
+
+         </div>
+
+         <div class="heroImagen">
+            <img src="images/perrogato.jpg" alt="Mascotas en consulta veterinaria">
+         
+            </div>
+
+      </section>
+
+<section class="galeria-vetcare">
+
+    <h2>Cuidamos a quienes más quieres</h2>
+
+    <p class="galeria-subtitulo">
+        Atención veterinaria con profesionalismo, cariño y confianza.
+    </p>
+
+    <div class="galeria-contenedor">
+
+        <div class="foto-vetcare">
+            <img src="doctor1.jpg" alt="Veterinario atendiendo a un perro">
+        </div>
+
+        <div class="foto-vetcare">
+            <img src="doctor2.jpg" alt="Veterinario atendiendo a un gato">
+        </div>
+
+        <div class="foto-vetcare">
+            <img src="doctor3.jpg" alt="Veterinario con una mascota">
+        </div>
+
+    </div>
+
+</section>
+
+<section id="servicios" class="servicios">
+
+    <h2>Nuestros Servicios</h2>
+
+    <div class="servicios-contenedor">
+
+        <div class="tarjeta-servicio">
+            <h3>🩺 Consulta Veterinaria</h3>
+            <p>
+                Atención médica para cuidar la salud y bienestar de tu mascota.
+            </p>
+        </div>
+
+        <div class="tarjeta-servicio">
+            <h3>💉 Vacunación</h3>
+            <p>
+                Protege a tu mascota mediante un adecuado programa de vacunación.
+            </p>
+        </div>
+
+        <div class="tarjeta-servicio">
+            <h3>🐾 Desparasitación</h3>
+            <p>
+                Prevención y control de parásitos para mantener a tu mascota saludable.
+            </p>
+        </div>
+
+        <div class="tarjeta-servicio">
+            <h3>✂️ Baño y Grooming</h3>
+            <p>
+                Cuidado, higiene y estética para que tu mascota luzca y se sienta mejor.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="nosotros" class="nosotros">
+
+    <h2>Conoce VetCare</h2>
+
+    <div class="nosotros-contenido">
+
+        <div class="nosotros-texto">
+
+            <h3>Cuidamos a quienes más quieres</h3>
+
+            <p>
+                En VetCare nos dedicamos al cuidado y bienestar de tus mascotas,
+                brindando atención veterinaria con profesionalismo, confianza y cariño.
+            </p>
+
+            <p>
+                Nuestro objetivo es ofrecer una atención cercana y de calidad para
+                perros y gatos, ayudándolos a tener una vida más saludable y feliz.
+            </p>
+
+        </div>
+
+        <div class="nosotros-info">
+
+            <div class="info-nosotros">
+                <h3>🐾 Atención profesional</h3>
+                <p>Cuidamos la salud de tu mascota con responsabilidad.</p>
+            </div>
+
+            <div class="info-nosotros">
+                <h3>❤️ Trato con cariño</h3>
+                <p>Cada mascota recibe una atención cercana y especial.</p>
+            </div>
+
+            <div class="info-nosotros">
+                <h3>🩺 Bienestar integral</h3>
+                <p>Trabajamos para mantener a tu mascota saludable y feliz.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+      <section id="formularioCita">
+   <h2>Agendar una cita.</h2>
+
+      <form id="formCita" action="https://formsubmit.co/abrahamalessandro26@gmail.com" method="POST">
+
+      <label>Nombre del dueño:</label>
+      <input type="text" id="nombreDueño" name="Dueño" required>
+
+      <label>Celular / WhatsApp:</label>
+<input type="tel" id="celular" name="Celular" inputmode="numeric" pattern="9[0-9]{8}" maxlength="9" placeholder="Ej: 958993139" title="Ingresa 9 dígitos, empezando con 9" required>
+
+      <label>Nombre de la mascota:</label>
+      <input type="text" id="nombreMascota" name="Mascota" required>
+
+      <label>Tipo de mascota:</label>
+      <select id="tipoMascota" name="Tipo">
+         <option value="perro">Perro</option>
+         <option value="gato">Gato</option>
+         <option value="otro">Otro</option>
+      </select>
+
+      <label>Fecha:</label>
+      <input type="date" id="fechaCita" name="Fecha" required>
+
+      <label>Hora:</label>
+      <input type="time" id="horaCita" name="Hora" required>
+
+      <label>Motivo de la consulta:</label>
+      <textarea id="motivo" name="Motivo"></textarea>
+
+      <input type="hidden" name="_subject" value="Nueva cita desde la web">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit" id="guardarCita">Confirmar cita</button>
+   </form>
+</section>
+
+         <div id="resultadoCita"></div>
+         
+      
+      <section id="contacto" class="contacto">
+
+    <h2>Contáctanos</h2>
+
+    <div class="contacto-contenido">
+
+        <div class="datos-contacto">
+            <h3>Veterinaria VetCare</h3>
+
+            <p>📍 Dirección: Av José Granda 3666, San Martín de Porres, Lima</p>
+            <p>📞 Teléfono: 958 993 139</p>
+            <p>💬 WhatsApp: 958 993 139</p>
+            <p>🕐 Horario: Lunes a sábado, 9:00 a.m. - 7:00 p.m.</p>
+
+        </div>
+
+        <div class="mapa">
+            <iframe
+                src="https://www.google.com/maps?q=Av+José+Granda+3666,+San+Martín+de+Porres+15101,+Perú&output=embed"
+                width="100%"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+
+    </div>
+
+</section>
+
+   </main>      
+<script src="script.js"></script>
+
+<a href="https://wa.me/51958993139" class="boton-whatsapp" target="_blank" aria-label="Escríbenos por WhatsApp"> <i class="fa-brands fa-whatsapp"></i>
+</a>    
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería Don Filo | Lima</title>
+    <meta name="description" content="Barbería Don Filo en Lima. Cortes clásicos y modernos, barba perfilada y buen ambiente. Reserva tu hora y evita esperas.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+   <header>
+      <h1>💈 Barbería Don Filo</h1>
+      <nav>
+         <a href="#">Inicio</a>
+         <a href="#servicios">Servicios</a>
+         <a href="#nosotros">Nosotros</a>
+         <a href="#formularioCita">Citas</a>
+         <a href="#contacto">Contacto</a>
+      </nav>
+   </header>
+
+   <main>
+      <section class="hero">
+         <div class="heroTexto">
+            <h2>Corte fino, estilo propio</h2>
+            <p>Cortes clásicos y modernos, barba perfilada y buen ambiente. Reserva tu hora y evita esperas.</p>
+            <button id="botonCita">Reservar mi hora</button>
+         </div>
+         <!-- FOTO PRINCIPAL: guarda tu foto en images/hero.jpg -->
+         <div class="heroImagen caja" data-e="💈">
+            <img src="images/barber1.jpg" alt="Barbería Don Filo" onerror="this.remove()">
+         </div>
+      </section>
+
+      <!-- GALERÍA: images/foto1.jpg, foto2.jpg, foto3.jpg -->
+      <section class="galeria-vetcare">
+         <h2>Nuestro estilo</h2>
+         <p class="galeria-subtitulo">Mira el trabajo de nuestros barberos.</p>
+         <div class="galeria-contenedor">
+        <div class="foto-vetcare caja" data-e="💈">
+            <img src="images/foto1.jpg" alt="Barbería Don Filo foto 1" onerror="this.remove()">
+        </div>
+
+        <div class="foto-vetcare caja" data-e="✂️">
+            <img src="images/foto2.jpg" alt="Barbería Don Filo foto 2" onerror="this.remove()">
+        </div>
+
+        <div class="foto-vetcare caja" data-e="🧔">
+            <img src="images/foto3.jpg" alt="Barbería Don Filo foto 3" onerror="this.remove()">
+        </div>
+         </div>
+      </section>
+
+      <section id="servicios" class="servicios">
+         <h2>Nuestros Servicios</h2>
+         <div class="servicios-contenedor">
+        <div class="tarjeta-servicio">
+            <h3>✂️ Corte clásico</h3>
+            <p>Tijera o máquina, a tu medida.</p>
+        </div>
+
+        <div class="tarjeta-servicio">
+            <h3>🧔 Perfilado de barba</h3>
+            <p>Líneas limpias y toalla caliente.</p>
+        </div>
+
+        <div class="tarjeta-servicio">
+            <h3>💈 Corte + barba</h3>
+            <p>El combo más pedido.</p>
+        </div>
+
+        <div class="tarjeta-servicio">
+            <h3>👶 Corte para niños</h3>
+            <p>Paciencia y buen trato.</p>
+        </div>
+         </div>
+      </section>
+
+      <section id="nosotros" class="nosotros">
+         <h2>Conoce Don Filo</h2>
+         <div class="nosotros-contenido">
+            <div class="nosotros-texto">
+               <h3>Tradición y estilo</h3>
+               <p>Somos una barbería de barrio con barberos experimentados y productos de calidad.</p>
+               <p>Cada cliente sale con el corte que quería.</p>
+            </div>
+            <div class="nosotros-info">
+            <div class="info-nosotros">
+                <h3>✂️ Barberos expertos</h3>
+                <p>Años de experiencia.</p>
+            </div>
+
+            <div class="info-nosotros">
+                <h3>🧴 Buenos productos</h3>
+                <p>Cuidado para tu piel.</p>
+            </div>
+
+            <div class="info-nosotros">
+                <h3>⏰ Con cita</h3>
+                <p>Sin esperas.</p>
+            </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- CAMBIAR: reemplaza el correo por el del cliente (la primera vez FormSubmit le pide confirmar) -->
+      <section id="formularioCita">
+         <h2>Reserva tu hora</h2>
+         <form id="formCita" action="https://formsubmit.co/CORREO_DEL_CLIENTE@gmail.com" method="POST">
+      <label>Nombre:</label>
+      <input type="text" id="Nombre" name="Nombre" required>
+      <label>Celular / WhatsApp:</label>
+      <input type="tel" id="Celular" name="Celular" inputmode="numeric" pattern="9[0-9]{8}" maxlength="9" placeholder="Ej: 958993139" title="9 dígitos, empezando con 9" required>
+      <label>Servicio:</label>
+      <select id="Servicio" name="Servicio"><option>Corte clásico</option><option>Perfilado de barba</option><option>Corte + barba</option><option>Corte para niños</option></select>
+      <label>Fecha:</label>
+      <input type="date" id="Fecha" name="Fecha" required>
+      <label>Hora:</label>
+      <input type="time" id="Hora" name="Hora" required>
+      <label>Comentarios:</label>
+      <textarea id="Comentarios" name="Comentarios"></textarea>
+
+      <input type="hidden" name="_subject" value="Nueva cita de barbería desde la web">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit" id="guardarCita">Confirmar cita</button>
+         </form>
+      </section>
+
+      <div id="resultadoCita"></div>
+
+      <section id="contacto" class="contacto">
+         <h2>Contáctanos</h2>
+         <div class="contacto-contenido">
+            <div class="datos-contacto">
+               <h3>Barbería Don Filo</h3>
+               <p>📍 Dirección: Av. Los Olivos 321, Lima</p>
+               <p>📞 Teléfono: 999 999 999</p>
+               <p>💬 WhatsApp: 999 999 999</p>
+               <p>🕐 Horario: Lunes a sábado, 10:00 a.m. - 9:00 p.m.</p>
+            </div>
+            <div class="mapa">
+               <iframe src="https://www.google.com/maps?q=Av.+Los+Olivos+321,+Lima&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!-- CAMBIAR: número de WhatsApp con código de país (51) y sin + -->
+   <a href="https://wa.me/51999999999" class="boton-whatsapp" target="_blank" aria-label="Escríbenos por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script src="script.js"></script>
+</body>
+</html>

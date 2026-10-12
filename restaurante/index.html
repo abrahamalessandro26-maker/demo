@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Criollo | Lima</title>
+    <meta name="description" content="Sabor Criollo en Lima. Comida peruana preparada al momento. Reserva tu mesa para almuerzos, cenas o celebraciones.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+   <header>
+      <h1>🍽️ Sabor Criollo</h1>
+      <nav>
+         <a href="#">Inicio</a>
+         <a href="#servicios">Servicios</a>
+         <a href="#nosotros">Nosotros</a>
+         <a href="#formularioCita">Reservas</a>
+         <a href="#contacto">Contacto</a>
+      </nav>
+   </header>
+
+   <main>
+      <section class="hero">
+         <div class="heroTexto">
+            <h2>Sabor de casa, en cada plato</h2>
+            <p>Comida peruana preparada al momento. Reserva tu mesa para almuerzos, cenas o celebraciones.</p>
+            <button id="botonCita">Reservar mesa</button>
+         </div>
+         <!-- FOTO PRINCIPAL: guarda tu foto en images/hero.jpg -->
+         <div class="heroImagen caja" data-e="🍽️">
+            <img src="images/hero.jpg" alt="Sabor Criollo" onerror="this.remove()">
+         </div>
+      </section>
+
+      <!-- GALERÍA: images/foto1.jpg, foto2.jpg, foto3.jpg -->
+      <section class="galeria-vetcare">
+         <h2>Nuestros platos</h2>
+         <p class="galeria-subtitulo">Ingredientes frescos y recetas de familia.</p>
+         <div class="galeria-contenedor">
+        <div class="foto-vetcare caja" data-e="🍲">
+            <img src="images/foto1.jpg" alt="Sabor Criollo foto 1" onerror="this.remove()">
+        </div>
+
+        <div class="foto-vetcare caja" data-e="🐟">
+            <img src="images/foto2.jpg" alt="Sabor Criollo foto 2" onerror="this.remove()">
+        </div>
+
+        <div class="foto-vetcare caja" data-e="🍗">
+            <img src="images/foto3.jpg" alt="Sabor Criollo foto 3" onerror="this.remove()">
+        </div>
+         </div>
+      </section>
+
+      <section id="servicios" class="servicios">
+         <h2>Nuestros Servicios</h2>
+         <div class="servicios-contenedor">
+        <div class="tarjeta-servicio">
+            <h3>🍲 Menú del día</h3>
+            <p>Entrada, plato de fondo y refresco.</p>
+        </div>
+
+        <div class="tarjeta-servicio">
+            <h3>🐟 Cebiche y mariscos</h3>
+            <p>Pescado fresco todos los días.</p>
+        </div>
+
+        <div class="tarjeta-servicio">
+            <h3>🍗 Platos a la carta</h3>
+            <p>Lomo saltado, ají de gallina y más.</p>
+        </div>
+
+        <div class="tarjeta-servicio">
+            <h3>🎉 Eventos y reuniones</h3>
+            <p>Espacio para grupos y celebraciones.</p>
+        </div>
+         </div>
+      </section>
+
+      <section id="nosotros" class="nosotros">
+         <h2>Conoce Sabor Criollo</h2>
+         <div class="nosotros-contenido">
+            <div class="nosotros-texto">
+               <h3>Cocina con tradición</h3>
+               <p>Cocinamos con recetas de familia y productos frescos del mercado.</p>
+               <p>Un lugar para compartir en familia y con amigos.</p>
+            </div>
+            <div class="nosotros-info">
+            <div class="info-nosotros">
+                <h3>👨‍🍳 Recetas caseras</h3>
+                <p>Sabor auténtico.</p>
+            </div>
+
+            <div class="info-nosotros">
+                <h3>🥬 Productos frescos</h3>
+                <p>Del mercado a tu mesa.</p>
+            </div>
+
+            <div class="info-nosotros">
+                <h3>🪑 Ambiente familiar</h3>
+                <p>Para todos.</p>
+            </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- CAMBIAR: reemplaza el correo por el del cliente (la primera vez FormSubmit le pide confirmar) -->
+      <section id="formularioCita">
+         <h2>Reserva tu mesa</h2>
+         <form id="formCita" action="https://formsubmit.co/CORREO_DEL_CLIENTE@gmail.com" method="POST">
+      <label>Nombre:</label>
+      <input type="text" id="Nombre" name="Nombre" required>
+      <label>Celular / WhatsApp:</label>
+      <input type="tel" id="Celular" name="Celular" inputmode="numeric" pattern="9[0-9]{8}" maxlength="9" placeholder="Ej: 958993139" title="9 dígitos, empezando con 9" required>
+      <label>Número de personas:</label>
+      <input type="number" id="Personas" name="Personas" min="1" max="30" required>
+      <label>Fecha:</label>
+      <input type="date" id="Fecha" name="Fecha" required>
+      <label>Hora:</label>
+      <input type="time" id="Hora" name="Hora" required>
+      <label>Comentarios (cumpleaños, alergias...):</label>
+      <textarea id="Comentarios" name="Comentarios"></textarea>
+
+      <input type="hidden" name="_subject" value="Nueva reserva desde la web">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit" id="guardarCita">Confirmar reserva</button>
+         </form>
+      </section>
+
+      <div id="resultadoCita"></div>
+
+      <section id="contacto" class="contacto">
+         <h2>Contáctanos</h2>
+         <div class="contacto-contenido">
+            <div class="datos-contacto">
+               <h3>Sabor Criollo</h3>
+               <p>📍 Dirección: Av. Central 555, Lima</p>
+               <p>📞 Teléfono: 999 999 999</p>
+               <p>💬 WhatsApp: 999 999 999</p>
+               <p>🕐 Horario: Martes a domingo, 12:00 p.m. - 10:00 p.m.</p>
+            </div>
+            <div class="mapa">
+               <iframe src="https://www.google.com/maps?q=Av.+Central+555,+Lima&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!-- CAMBIAR: número de WhatsApp con código de país (51) y sin + -->
+   <a href="https://wa.me/51999999999" class="boton-whatsapp" target="_blank" aria-label="Escríbenos por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script src="script.js"></script>
+</body>
+</html>

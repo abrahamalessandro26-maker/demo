@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmacia Vida | Lima</title>
+    <meta name="description" content="Farmacia Vida en Lima. Medicamentos, productos de cuidado personal y delivery rápido. Pide por la web o por WhatsApp.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+   <header>
+      <h1>💊 Farmacia Vida</h1>
+      <nav>
+         <a href="#">Inicio</a>
+         <a href="#servicios">Servicios</a>
+         <a href="#nosotros">Nosotros</a>
+         <a href="#formularioCita">Pedidos</a>
+         <a href="#contacto">Contacto</a>
+      </nav>
+   </header>
+
+   <main>
+      <section class="hero">
+         <div class="heroTexto">
+            <h2>Tu salud, a un mensaje de distancia</h2>
+            <p>Medicamentos, productos de cuidado personal y delivery rápido. Pide por la web o por WhatsApp.</p>
+            <button id="botonCita">Hacer un pedido</button>
+         </div>
+         <!-- FOTO PRINCIPAL: guarda tu foto en images/hero.jpg -->
+         <div class="heroImagen caja" data-e="💊">
+            <img src="images/hero.jpg" alt="Farmacia Vida" onerror="this.remove()">
+         </div>
+      </section>
+
+      <!-- GALERÍA: images/foto1.jpg, foto2.jpg, foto3.jpg -->
+      <section class="galeria-vetcare">
+         <h2>Nuestra farmacia</h2>
+         <p class="galeria-subtitulo">Todo para el cuidado de tu familia.</p>
+         <div class="galeria-contenedor">
+        <div class="foto-vetcare caja" data-e="💊">
+            <img src="images/foto1.jpg" alt="Farmacia Vida foto 1" onerror="this.remove()">
+        </div>
+
+        <div class="foto-vetcare caja" data-e="🧴">
+            <img src="images/foto2.jpg" alt="Farmacia Vida foto 2" onerror="this.remove()">
+        </div>
+
+        <div class="foto-vetcare caja" data-e="🚚">
+            <img src="images/foto3.jpg" alt="Farmacia Vida foto 3" onerror="this.remove()">
+        </div>
+         </div>
+      </section>
+
+      <section id="servicios" class="servicios">
+         <h2>Nuestros Servicios</h2>
+         <div class="servicios-contenedor">
+        <div class="tarjeta-servicio">
+            <h3>💊 Medicamentos</h3>
+            <p>Genéricos y de marca.</p>
+        </div>
+
+        <div class="tarjeta-servicio">
+            <h3>🚚 Delivery</h3>
+            <p>Llevamos tu pedido a casa.</p>
+        </div>
+
+        <div class="tarjeta-servicio">
+            <h3>💉 Inyectables</h3>
+            <p>Aplicación segura y rápida.</p>
+        </div>
+
+        <div class="tarjeta-servicio">
+            <h3>🧴 Cuidado personal</h3>
+            <p>Higiene, bebés y bienestar.</p>
+        </div>
+         </div>
+      </section>
+
+      <section id="nosotros" class="nosotros">
+         <h2>Conoce Farmacia Vida</h2>
+         <div class="nosotros-contenido">
+            <div class="nosotros-texto">
+               <h3>Cerca de ti</h3>
+               <p>Te atendemos con rapidez y te orientamos para que lleves lo que necesitas.</p>
+               <p>Trabajamos con productos de calidad y precios justos.</p>
+            </div>
+            <div class="nosotros-info">
+            <div class="info-nosotros">
+                <h3>✅ Productos garantizados</h3>
+                <p>Con registro sanitario.</p>
+            </div>
+
+            <div class="info-nosotros">
+                <h3>🚚 Delivery rápido</h3>
+                <p>En tu zona.</p>
+            </div>
+
+            <div class="info-nosotros">
+                <h3>💬 Te orientamos</h3>
+                <p>Consulta sin costo.</p>
+            </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- CAMBIAR: reemplaza el correo por el del cliente (la primera vez FormSubmit le pide confirmar) -->
+      <section id="formularioCita">
+         <h2>Haz tu pedido</h2>
+         <form id="formCita" action="https://formsubmit.co/CORREO_DEL_CLIENTE@gmail.com" method="POST">
+      <label>Nombre:</label>
+      <input type="text" id="Nombre" name="Nombre" required>
+      <label>Celular / WhatsApp:</label>
+      <input type="tel" id="Celular" name="Celular" inputmode="numeric" pattern="9[0-9]{8}" maxlength="9" placeholder="Ej: 958993139" title="9 dígitos, empezando con 9" required>
+      <label>Dirección de entrega:</label>
+      <input type="text" id="Direccion" name="Direccion" required>
+      <label>¿Qué necesitas?:</label>
+      <textarea id="Pedido" name="Pedido"></textarea>
+
+      <input type="hidden" name="_subject" value="Nuevo pedido de farmacia desde la web">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit" id="guardarCita">Enviar pedido</button>
+         </form>
+      </section>
+
+      <div id="resultadoCita"></div>
+
+      <section id="contacto" class="contacto">
+         <h2>Contáctanos</h2>
+         <div class="contacto-contenido">
+            <div class="datos-contacto">
+               <h3>Farmacia Vida</h3>
+               <p>📍 Dirección: Av. Salud 100, Lima</p>
+               <p>📞 Teléfono: 999 999 999</p>
+               <p>💬 WhatsApp: 999 999 999</p>
+               <p>🕐 Horario: Todos los días, 8:00 a.m. - 10:00 p.m.</p>
+            </div>
+            <div class="mapa">
+               <iframe src="https://www.google.com/maps?q=Av.+Salud+100,+Lima&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!-- CAMBIAR: número de WhatsApp con código de país (51) y sin + -->
+   <a href="https://wa.me/51999999999" class="boton-whatsapp" target="_blank" aria-label="Escríbenos por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script src="script.js"></script>
+</body>
+</html>

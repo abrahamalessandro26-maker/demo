@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica San Rafael | Lima</title>
+    <meta name="description" content="Clínica San Rafael en Lima. Atención médica profesional para toda la familia. Reserva tu cita en un minuto.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+   <header>
+      <h1>🏥 Clínica San Rafael</h1>
+      <nav>
+         <a href="#">Inicio</a>
+         <a href="#servicios">Servicios</a>
+         <a href="#nosotros">Nosotros</a>
+         <a href="#formularioCita">Citas</a>
+         <a href="#contacto">Contacto</a>
+      </nav>
+   </header>
+
+   <main>
+      <section class="hero">
+         <div class="heroTexto">
+            <h2>Tu salud, en buenas manos</h2>
+            <p>Atención médica profesional para toda la familia. Reserva tu cita en un minuto.</p>
+            <button id="botonCita">Agendar una cita</button>
+         </div>
+         <!-- FOTO PRINCIPAL: guarda tu foto en images/hero.jpg -->
+         <div class="heroImagen caja" data-e="🏥">
+            <img src="images/clinica1.jpg.png" alt="Clínica San Rafael" onerror="this.remove()">
+         </div>
+      </section>
+
+      <!-- GALERÍA: images/foto1.jpg, foto2.jpg, foto3.jpg -->
+      <section class="galeria-vetcare">
+         <h2>Conoce nuestra clínica</h2>
+         <p class="galeria-subtitulo">Instalaciones modernas y un equipo que te cuida.</p>
+         <div class="galeria-contenedor">
+        <div class="foto-vetcare caja" data-e="🏥">
+            <img src="images/foto1.jpg" alt="Clínica San Rafael foto 1" onerror="this.remove()">
+        </div>
+
+        <div class="foto-vetcare caja" data-e="🩺">
+            <img src="images/foto2.jpg" alt="Clínica San Rafael foto 2" onerror="this.remove()">
+        </div>
+
+        <div class="foto-vetcare caja" data-e="👩‍⚕️">
+            <img src="images/foto3.jpg" alt="Clínica San Rafael foto 3" onerror="this.remove()">
+        </div>
+         </div>
+      </section>
+
+      <section id="servicios" class="servicios">
+         <h2>Nuestros Servicios</h2>
+         <div class="servicios-contenedor">
+        <div class="tarjeta-servicio">
+            <h3>🩺 Medicina general</h3>
+            <p>Chequeos y control de enfermedades comunes.</p>
+        </div>
+
+        <div class="tarjeta-servicio">
+            <h3>👶 Pediatría</h3>
+            <p>Control del niño sano y vacunas.</p>
+        </div>
+
+        <div class="tarjeta-servicio">
+            <h3>🌸 Ginecología</h3>
+            <p>Control prenatal y prevención.</p>
+        </div>
+
+        <div class="tarjeta-servicio">
+            <h3>🔬 Laboratorio</h3>
+            <p>Análisis con resultados el mismo día.</p>
+        </div>
+         </div>
+      </section>
+
+      <section id="nosotros" class="nosotros">
+         <h2>Conoce Clínica San Rafael</h2>
+         <div class="nosotros-contenido">
+            <div class="nosotros-texto">
+               <h3>Cuidamos de ti y de tu familia</h3>
+               <p>Somos una clínica con atención cercana y profesional. Nuestro objetivo es que recibas el mejor cuidado sin largas esperas.</p>
+               <p>Contamos con especialistas y laboratorio propio para resolver tus consultas en un solo lugar.</p>
+            </div>
+            <div class="nosotros-info">
+            <div class="info-nosotros">
+                <h3>🩺 Atención profesional</h3>
+                <p>Médicos con experiencia.</p>
+            </div>
+
+            <div class="info-nosotros">
+                <h3>⏱️ Sin esperas</h3>
+                <p>Citas con horario.</p>
+            </div>
+
+            <div class="info-nosotros">
+                <h3>❤️ Trato humano</h3>
+                <p>Te escuchamos con calma.</p>
+            </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- CAMBIAR: reemplaza el correo por el del cliente (la primera vez FormSubmit le pide confirmar) -->
+      <section id="formularioCita">
+         <h2>Agendar una cita</h2>
+         <form id="formCita" action="https://formsubmit.co/CORREO_DEL_CLIENTE@gmail.com" method="POST">
+      <label>Nombre del paciente:</label>
+      <input type="text" id="Paciente" name="Paciente" required>
+      <label>Celular / WhatsApp:</label>
+      <input type="tel" id="Celular" name="Celular" inputmode="numeric" pattern="9[0-9]{8}" maxlength="9" placeholder="Ej: 958993139" title="9 dígitos, empezando con 9" required>
+      <label>Especialidad:</label>
+      <select id="Especialidad" name="Especialidad"><option>Medicina general</option><option>Pediatría</option><option>Ginecología</option><option>Laboratorio</option></select>
+      <label>Fecha:</label>
+      <input type="date" id="Fecha" name="Fecha" required>
+      <label>Hora:</label>
+      <input type="time" id="Hora" name="Hora" required>
+      <label>Motivo de la consulta:</label>
+      <textarea id="Motivo" name="Motivo"></textarea>
+
+      <input type="hidden" name="_subject" value="Nueva cita desde la web">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit" id="guardarCita">Confirmar cita</button>
+         </form>
+      </section>
+
+      <div id="resultadoCita"></div>
+
+      <section id="contacto" class="contacto">
+         <h2>Contáctanos</h2>
+         <div class="contacto-contenido">
+            <div class="datos-contacto">
+               <h3>Clínica San Rafael</h3>
+               <p>📍 Dirección: Av. Principal 123, Lima</p>
+               <p>📞 Teléfono: 999 999 999</p>
+               <p>💬 WhatsApp: 999 999 999</p>
+               <p>🕐 Horario: Lunes a sábado, 8:00 a.m. - 8:00 p.m.</p>
+            </div>
+            <div class="mapa">
+               <iframe src="https://www.google.com/maps?q=Av.+Principal+123,+Lima&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!-- CAMBIAR: número de WhatsApp con código de país (51) y sin + -->
+   <a href="https://wa.me/51999999999" class="boton-whatsapp" target="_blank" aria-label="Escríbenos por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script src="script.js"></script>
+</body>
+</html>

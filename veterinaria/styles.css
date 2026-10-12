@@ -1,0 +1,846 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    padding: 20px;
+    background-color: #eeeeee;
+}
+
+nav a {
+    margin-right: 20px;
+}
+
+main {
+    padding: 40px;
+}
+
+#formularioCita {
+    display: none;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f5faf8;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tarjetaCita {
+    background-color: #e8f4f8;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    border: 2px solid #b8dce5;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.tarjetaCita h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.tarjetaCita p {
+    margin: 8px 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    background-color: #4caf8f;
+    color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 40px;
+    min-height: 450px;
+    background-color: #f8fbff;
+}
+
+.heroTexto {
+    flex: 1;
+}
+
+.heroTexto h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.heroTexto p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.heroTexto button {
+    padding: 14px 28px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4caf8f;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.heroTexto button:hover {
+    background-color: #3d9678;
+    transform: scale(1.05);
+}
+
+.heroImagen {
+    flex: 1;
+}
+
+.heroImagen img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+#formularioCita input,
+#formularioCita select,
+#formularioCita textarea {
+   width: 100%;
+   padding: 12px;
+   margin-top: 6px;
+   margin-bottom: 18px;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   font-size: 16px;
+   box-sizing: border-box;
+}
+
+#guardarCita {
+    width: 100%;
+    padding: 13px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4caf8f;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#guardarCita:hover {
+    background-color: #3d9678;
+    transform: scale(1.02);
+}
+
+#listaCitas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.tarjetaCita {
+    max-width: 100%;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #d6e6eb;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tarjetaCita h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #2c7a7b;
+    font-size: 22px;
+}
+
+.tarjetaCita strong {
+    color: #222;
+}
+
+.editarCita,
+.eliminarCita {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0;
+}
+
+.editarCita {
+    background-color: #4caf8f !important;
+    color: white;
+    min-width: 100px;
+}
+
+.editarCita:hover {
+    background-color: #39806b !important;
+    transform: scale(1.03);
+}
+
+.eliminarCita {
+    background-color: #e57373;
+    color: white;
+    min-width: 100px;
+}
+
+.eliminarCita:hover {
+    background-color: #c94f4f;
+    transform: scale(1.03);
+}
+
+.tarjetaCita p {
+    display: flex;
+    gap: 8px;
+}
+
+.accionesCita {
+   display: flex;
+   gap: 30px;
+   margin-top: 15px;
+}
+
+.tarjetaCita {
+    position: relative;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+    border-left: 5px solid #4caf8f;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.tarjetaCita:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.tarjetaCita h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #2c7a7b;
+    font-size: 22px;
+}
+
+.tarjetaCita p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #444;
+}
+
+.tarjetaCita strong {
+    color: #222;
+}
+
+.accionesCita {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.accionesCita button {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.accionesCita .editarCita {
+    background-color: #4caf8f;
+    color: white;
+}
+
+.accionesCita .editarCita:hover {
+    background-color: #39806b;
+    transform: scale(1.03);
+}
+
+.accionesCita .eliminarCita {
+    background-color: #e57373;
+    color: white;
+}
+
+.accionesCita .eliminarCita:hover {
+    background-color: #c94f4f;
+    transform: scale(1.03);
+}
+
+.tarjetaCita {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accionesCita {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.accionesCita button {
+    flex: 0 0 120px;
+}
+
+.datosFechaHora {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.datosFechaHora div {
+    flex: 1;
+    padding: 12px;
+    background-color: #f1f8f6;
+    border-radius: 10px;
+    border: 1px solid #d8eee8;
+}
+
+.datosFechaHora span {
+    display: block;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.datosFechaHora strong {
+    font-size: 17px;
+    color: #2c7a7b;
+}
+
+.tarjetaCita {
+    padding: 22px;
+}
+
+.tarjetaCita h3 {
+    margin-bottom: 15px;
+}
+
+.tarjetaCita p {
+    margin: 7px 0;
+}
+
+.datosFechaHora {
+    margin: 15px 0;
+}
+
+.accionesCita {
+    margin-top: 15px;
+}
+
+/* Encabezado y estado de la cita */
+
+.encabezadoCita {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.encabezadoCita h3 {
+    margin: 0;
+}
+
+.estadoCita {
+    padding: 6px 12px;
+    border-radius: 20px;
+    background-color: #fff3cd;
+    color: #856404;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Diseño para celulares */
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .heroTexto h2 {
+        font-size: 32px;
+    }
+
+    .heroTexto p {
+        font-size: 16px;
+    }
+
+    .heroImagen {
+        width: 100%;
+    }
+
+    .heroImagen img {
+        width: 100%;
+    }
+
+    #listaCitas {
+        width: 100%;
+    }
+
+    .tarjetaCita {
+        padding: 18px;
+    }
+
+    .datosFechaHora {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .accionesCita {
+        justify-content: stretch;
+    }
+
+    .accionesCita button {
+        flex: 1;
+    }
+
+}
+
+.boton-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton-whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.contacto {
+    padding: 70px 20px;
+    text-align: center;
+    background-color: #f8fbff;
+}
+
+ h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.contacto-contenido {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.datos-contacto,
+.mapa {
+    flex: 1;
+}
+
+.datos-contacto {
+    background-color: white;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.datos-contacto h3 {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.datos-contacto p {
+    margin: 16px 0;
+}
+
+.mapa {
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border: 0;
+    display: block;
+}
+
+.servicios {
+    padding: 70px 20px 100px;
+    text-align: center;
+    background-color: #f8fbff;
+}
+
+.servicios h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.servicios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.tarjeta-servicio {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-servicio h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.tarjeta-servicio p {
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+
+    .servicios-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .servicios-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================
+   SECCIÓN NOSOTROS
+========================= */
+
+.nosotros {
+    padding: 50px 8%;
+    background-color: #f5fbfc;
+    text-align: center;
+}
+
+.nosotros h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #168fa3;
+}
+
+.nosotros-contenido {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+    justify-content: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.nosotros-texto {
+    flex: 1;
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.nosotros-texto h3 {
+    color: #168fa3;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.nosotros-texto p {
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.nosotros-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-nosotros {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.info-nosotros h3 {
+    margin-bottom: 8px;
+    color: #168fa3;
+}
+
+.info-nosotros p {
+    margin: 0;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* =========================
+   FORMULARIO DE CITAS
+========================= */
+
+#formularioCita {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+#formularioCita h2 {
+    text-align: center;
+    color: #168fa3;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+#formularioCita label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 7px;
+    font-weight: 600;
+    color: #444;
+}
+
+#formularioCita input,
+#formularioCita select,
+#formularioCita textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d5e2e5;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#formularioCita input:focus,
+#formularioCita select:focus,
+#formularioCita textarea:focus {
+    border-color: #168fa3;
+}
+
+#formularioCita textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#guardarCita {
+    display: block;
+    width: 100%;
+    margin-top: 28px;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background-color: #168fa3;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#guardarCita:hover {
+    background-color: #11788a;
+}
+
+/* Espaciado de la sección de citas */
+
+#citas {
+    padding: 30px 8%;
+}
+
+#citas h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   GALERÍA VETCARE
+========================= */
+
+.galeria-vetcare {
+    padding: 70px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.galeria-vetcare h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #168fa3;
+}
+
+.galeria-subtitulo {
+    margin-bottom: 40px;
+    color: #666;
+    font-size: 17px;
+}
+
+.galeria-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.foto-vetcare {
+    height: 280px;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+}
+
+.foto-vetcare img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.foto-vetcare:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+
+    .galeria-contenedor {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .foto-vetcare {
+        height: 300px;
+    }
+
+    @media (max-width: 768px) {
+       
+     .contacto-contenido {
+        flex-direction: column;
+        gap: 30px;
+     }
+
+     .datos-contacto,
+     .mapa {
+        width: 100%;
+     }
+    } 
+
+    }
+
+/* Encabezado en celulares */
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px 20px;
+    }
+
+    nav a {
+        font-size: 16px;
+        margin: 0;
+    }
+
+}         
+
+
+
+
+
+
+
